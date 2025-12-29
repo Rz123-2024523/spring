@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>人物介绍</title>
+    <link rel="stylesheet" href="../css/布局.css">
+    <link rel="stylesheet" href="../css/轮播.css">
+    <style>
+        .ku{
+            background-color: burlywood;
+            height: 50px;
+            margin: 0px;
+        }
+        body{
+            margin: 0px;
+        }
+        a:active, a:hover{
+            color: darkorange;
+            text-decoration: underline;
+        }
+        a:link, a:visited{
+            color: white;
+            text-decoration: none;
+        }
+        .h{
+            height: 150px;
+            width: 120px;
+            margin: 10px;
+            margin-left: 70px;
+            float: left;
+            /*animation: moveh alternate 5s infinite;*/
+            box-shadow: 10px 10px 20px 10px;
+        }
+        .h:hover{
+            transform: translateY(-5px);
+        }
+        .e {
+            height: 150px;
+            width: 80%;
+            font-size: 15px;
+            font-family: 宋体;
+            margin: 15px;
+            height: 150px;
+            float: left;
+        }
+        .g{
+            background-color: burlywood;
+            height: 50px;
+            width: 100%;
+            margin: 0px;
+            color: white;
+            font-family: 微软雅黑;
+            font-size: 15px;
+            line-height: 50px;
+            text-align: center;
+            float: left;
+        }
+        @media screen and (max-width: 1080px) {
+            .ku {
+                background-color: red;
+                height: 30px;
+                margin: 0px;
+                width: 100%;
+            }
+
+            body {
+                margin: 0px;
+            }
+
+            .a {
+                color: white;
+                font-size: 20px;
+                font-family: 微软雅黑;
+                float: left;
+                margin-left: 10px;
+            }
+
+            .b {
+                font-size: 13px;
+                line-height: 30px;
+                width: 60px;
+                height: 30px;
+            }
+
+            .e {
+                height: 200px;
+                width: 100%;
+                font-size: 15px;
+                font-family: 宋体;
+                margin-left: 15px;
+                margin-top: 15px;
+                margin-right: 0;
+                height: 150px;
+                float: left;
+            }
+
+            .f {
+                background-color: #73abff;
+                margin: 15px;
+                line-height: 30px;
+                height: 30px;
+                font-family: 微软雅黑;
+                font-size: 15px;
+                text-align: left;
+                margin-top: 10px;
+            }
+            .overall{
+                width: 98%;
+                height: 300px;
+                padding: 0;
+            }
+            .content ul>li img{
+                width: 98%;
+                height: 300px;
+            }
+            .content ol{
+                margin-top: 250px;
+                grid-template-columns: repeat(3, 35px);
+            }
+            .content ol li{
+                width: 13px;
+                height: 5px;
+                border: 3px solid #af9d9d;
+            }
+            .box{
+                width:140px;
+                height:100px;
+                /* border:1px solid pink; */
+                position: fixed;
+                bottom: 0;
+                background-image: url(../pic/u=2083379215,3583338455&fm=253&fmt=auto&app=120&f=JPEG_副本_副本.png);
+                animation:
+                        move 1s steps(12) infinite,
+                        run 2s linear infinite;
+            }
+            /* 人在盒子里跑 */
+            @keyframes move{
+                from{
+                    background-position: -1680px 0;
+                }
+                /* 若从0 开始的话这个from可以省去 */
+                /* from{
+                    background-position: 0 0;
+                } */
+                to{
+                    background-position: 0 0;
+                }
+            }
+            @keyframes run{
+                from{
+                    transform: translateX(500px);
+                }
+                /* 若从0 开始的话这个from可以省去 */
+                /* from{
+                    transform: translateX(0);
+                } */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<!--<div class="mu"><input type="button" value="新增泡泡" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" onclick="createManyBoll()">-->
+<!--    <input type="button" value="开始移动" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" id="startButton"-->
+<!--           onclick="timer=setInterval(startFly,100)">-->
+<!--    <input type="button" value="停止移动" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" id="stopButton"-->
+<!--           disabled="disabled" onclick="stopFly()">-->
+<!--    <input type="button" value="删除泡泡" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" onclick="removeBoll()">-->
+<!--</div>-->
+<div class="ku">
+    <div class="a">蜀道驿影</div>
+    <div class="b"><a href="登录注册.html">登录注册</a></div>
+    <div class="b"><a href="图片鉴赏.html">蜀道产品</a></div>
+    <div class="b"><a href="人物介绍.html"> 游戏介绍</a></div>
+    <div class="b"><a href="../index.html"> 首页</a></div>
+</div>
+<div class="overall">
+    <!-- 内容  -->
+    <div class="content">
+        <!-- 轮播图片 -->
+        <ul>
+            <li><img src="../pic/蜀31.jpg" alt=""></li>
+            <li><img src="../pic/蜀32.jpg" alt=""></li>
+            <li><img src="../pic/蜀33.jpg" alt=""></li>
+        </ul>
+        <!-- 轮播图的点 -->
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+<!--    <div id="c"><img src="https://p1.ssl.qhimgs1.com/sdr/400__/t017d69ba5d58c4a7eb.jpg" height="350px"width="100%"></div>-->
+    <div class="f">游戏主要内容介绍</div>
+    <div class="h"><img src="../pic/蜀21.jpg" width="120px" height="150px"></div>
+    <div class="e"><p><font face="微软雅黑" size="5px"> 游戏关卡设计</font></p>
+    <p>关卡以金牛道、陈仓道、荔枝道三条古道的关键节点为核心，深度融合理史典以剑门关、白马关等为核心，设置栈道修复、古碑拓印等任务；陈仓道围绕宝鸡陈仓古城等节点，还原隧道开技并融入历史典故；荔枝道聚焦涪陵荔枝园等节点，设计物资保鲜、民俗文化互动等环节。</p>
+    <p>每个关卡设置"文化探索时限"与"紧急任务时限"双重时间机制，既保证玩家有充足时间了解文化内容，又通过紧急任务增加游戏紧张感与挑战性。
+    </p></div>
+    <div class="h"><img src="../pic/蜀22.jpg" width="120px" height="150px"></div>
+    <div class="e"><p><font face="微软雅黑" size="5px"> 障碍应对</font></p>
+        <p>障碍设计贴合古道实际通行挑战与文化保护主题，分为自然障碍与人为障碍两类。自然障碍包含山洪、山体落石、浓雾等，人为障碍包含栈道损毁、碑刻模糊、物资短缺等。</p>
+        <p>玩家需通过三种方式解决问题：一是策略规划，如选择安全绕行路；二是技能操作，如修复栈道、清理碑刻；三是 NPC 艺。解决障碍的过程中，同步传递文化保护与应急避险的相关知识。</p></div>
+    <div class="h"><img src="../pic/蜀23.jpg" width="120px" height="150px"></div>
+    <div class="e"><p><font face="微软雅黑" size="5px"> 路线选择</font></p>
+        <p>游戏采用"主线＋支线"的开放路线模式。主线任务为编撰《蜀道文化图志》，核心目标是收集三条古道的核心文化遗存，是推进游戏剧情的关键脉络。支线任务根据玩家的路线选择触发，内容包括探索未知名古道遗迹、帮助沿线百姓解决通行难题、参与地方民俗活动等。</p>
+        <p>完成支线任务可解锁隐藏的文化故事（如蜀道古柏保护传说、文人行旅轶事）与专属奖励，强化游戏的探索性与文化深度。
+        </p></div>
+    <div class="h"><img src="../pic/蜀24.jpg" width="120px" height="150px"></div>
+    <div class="e"><p><font face="微软雅黑" size="5px"> 奖励设计</font></p>
+        <p>奖励采用"固定＋随机＋保底"组合模式，全程承载文化传播功能。</p>
+        <p>固定奖励为通关核心关卡解锁的数字化文化藏品（如石门颂电子拓片、剑门关3D模型）及"文驿积分"，积分可兑换文化科普内容；随机奖励通过触发支线民俗表服装、定制壁纸等：累计一定尝试次数后，可解锁"文化传承礼包"，包含《蜀道文化图志》电子版、古道 VR 全景体验券等高价值数字化文创，保障文化获得感。
+        </p></div>
+    <div class="h"><img src="../pic/蜀25.jpg" width="120px" height="150px"></div>
+    <div class="e"><p><font face="微软雅黑" size="5px">文创设计</font></p>
+        <p>以"文化传播＋实用价值＋区域赋能"为核心，设计系列文创产品，实现游戏文化价值的线下延伸。核心文创包括标注文化节点与典故、预留空间的道全景地图手账，以有摩崖石刻、唐诗名句、支持扫码听故事的"蜀道文脉"书签。</p>
+    <p>区域赋能文创方面，联动沿线景区开发可线下使用的数字化导览手册，为剑门豆腐、涪陵荔枝等农特产品设计"蜀道驿传"主题包装，提升文化附加值，助力区域发展。</p>
+    </div>
+<div class="g">蜀道驿影</div>
+</body>
+<script src="../js/轮播.js"></script>
+</html>
