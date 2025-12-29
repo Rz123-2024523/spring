@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/布局.css">
+    <link rel="stylesheet" href="css/轮播.css">
+    <style>
+        @media screen and (min-width: 1080px){
+            .ku{
+                background-color: burlywood;
+                height: 50px;
+                margin: 0px;
+            }
+            body{
+                margin: 0px;
+            }
+            .d{
+                height: 100px;
+                float: left;
+                margin: 10px 20px;
+                margin-top: 20px;
+            }
+            .e{
+                font-size: 15px;
+                font-family: 宋体;
+                margin: 15px;
+                margin-top: 30px;
+                height: 100px;
+            }
+
+            .j{
+                font-size: 15px;
+                font-family: 宋体;
+                margin: 15px;
+                height: 150px;
+            }
+            .k{
+                font-size: 15px;
+                font-family: 宋体;
+                margin: 15px;
+                height: 400px;
+            }
+            .h{
+                height: 150px;
+                width: 120px;
+                margin: 10px;
+                float: right;
+            }
+            .i{
+                width: 1400px;
+                height: 200px;
+                margin: 15px;
+               text-align: center;
+
+            }
+            .g{
+                background-color: burlywood;
+                height: 50px;
+                margin: 0px;
+                color: white;
+                font-family: 微软雅黑;
+                font-size: 15px;
+                line-height: 50px;
+                text-align: center;}
+        }
+        @media screen and (max-width: 1080px){
+            .ku{
+                background-color: red;
+                height: 30px;
+                margin: 0px;
+                width: 100%;
+            }
+            body{
+                margin: 0px;
+            }
+            .a{
+                color: white;
+                font-size: 20px;
+                font-family: 微软雅黑;
+                float: left;
+                margin-left: 10px;
+            }
+            .b{
+                font-size: 13px;
+                line-height: 30px;
+                width: 60px;
+                height: 30px;
+            }
+            .d{
+                height: 100px;
+                float: left;
+                margin: 10px;
+                margin-top: 30px;
+            }
+            .f{
+                background-color: #73abff;
+                margin: 15px;
+                line-height: 30px;
+                height: 30px;
+                font-family: 微软雅黑;
+                font-size: 15px;
+                text-align: left;
+                margin: 0;
+                margin-top: 10px;
+            }
+            .e{
+                font-size: 15px;
+                font-family: 宋体;
+                margin-top: 40px;
+                margin-left: 15px;
+                margin-right: 15px;
+                height: 150px;
+            }
+            .j{
+                font-size: 15px;
+                font-family: 宋体;
+                margin-top: 50px;
+                margin-left: 10px;
+                height: 230px;
+            }
+            .h{
+                height: 150px;
+                width: 120px;
+                margin: 10px;
+                margin-top: 45px;
+                float: right;
+            }
+            .i{
+                width: 100%;
+                height: 300px;
+                margin-bottom: 15px;
+            }
+            .g{
+                background-color: red;
+                height: 50px;
+                margin: 0px;
+                color: white;
+                font-family: 微软雅黑;
+                font-size: 15px;
+                line-height: 50px;
+                text-align: center;
+            }
+            .overall{
+            width: 98%;
+            height: 300px;
+                padding: 0;
+        }
+            .content ul>li img{
+                width: 98%;
+                height: 300px;
+            }
+            .content ol{
+                margin-top: 250px;
+                grid-template-columns: repeat(3, 35px);
+            }
+            .content ol li{
+                width: 13px;
+                height: 5px;
+                border: 3px solid #af9d9d;
+            }
+            .box{
+                animation:
+                        move 1s steps(12) infinite,
+                        run 2s linear infinite;
+            }
+            /* 人在盒子里跑 */
+            @keyframes move{
+                from{
+                    background-position: -1680px 0;
+                }
+                /* 若从0 开始的话这个from可以省去 */
+                /* from{
+                    background-position: 0 0;
+                } */
+                to{
+                    background-position: 0 0;
+                }
+            }
+            @keyframes run{
+                from{
+                    transform: translateX(500px);
+                }
+            }
+        }
+        a:hover, a:active{
+            color: #565aff;
+            text-decoration: underline;
+        }
+        a:link, a:visited{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<!--<div class="mu"><input type="button" value="新增泡泡" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" onclick="createManyBoll()">-->
+<!--    <input type="button" value="开始移动" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" id="startButton"-->
+<!--           onclick="timer=setInterval(startFly,100)">-->
+<!--    <input type="button" value="停止移动" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" id="stopButton"-->
+<!--           disabled="disabled" onclick="stopFly()">-->
+<!--    <input type="button" value="删除泡泡" style="font-size:10px;height:55px;margin:5px 5px;border-radius:50%;background-color: #00beff" onclick="removeBoll()">-->
+<!--</div>-->
+<div class="ku">
+   <div class="a">蜀道驿影</div>
+    <div class="b"><a href="html/登录注册.html">登录注册</a></div>
+  <div class="b"><a href="html/图片鉴赏.html">蜀道产品</a></div>
+    <div class="b"><a href="html/人物介绍.html"> 游戏介绍</a></div>
+ <div class="b"><a href="index.html">首页</a></div>
+</div>
+<!-- 整体框架 -->
+<div class="overall">
+    <!-- 内容  -->
+    <div class="content">
+        <!-- 轮播图片 -->
+        <ul>
+            <li><img src="pic/蜀31.jpg" alt=""></li>
+            <li><img src="pic/蜀32.jpg" alt=""></li>
+            <li><img src="pic/蜀33.jpg" alt=""></li>
+        </ul>
+        <!-- 轮播图的点 -->
+        <ol>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+</div>
+<!--<div id="c"><img src="./图片/t047eb45c9b9b903730.jpg" height="350px"width="100%"></div>-->
+<div class="d"> <img src="./pic/蜀2.jpg" height="100px">
+</div>
+<div class="e"><p>《蜀道驿影》是一款以蜀道文化为核心，串联金牛道、荔枝道、陈仓道三条经典古道的通关类文化科普小游戏。</p>
+    <p></p>
+    <p></p>
+    <p>项目以"活化线性文化遗产、传承蜀道千年文脉"为核心目标，通过沉浸式游戏体验，让玩家在互动中感知蜀道作为南北交通动脉、文化长廊与国家统一战略通道的重要价值，兼具娱乐性与文化传播的双重属性。</p></div>
+<div class="f">游戏背景</div>
+<div class="h"><img src="./pic/蜀41.jpg" height="150px"width="120px"></div>
+<div class="j"><p>本游戏时代背景设定于王朝更迭之际，蜀道驿传体系濒临崩摩珍贵临损毁危机，沿线百姓陷入出行受阻、物资匮乏的困境。</p>
+    <p>玩家将化身"蜀道文驿使"，沿三条主线收集文化遗存、修缮驿道驿站，串联断裂的文化记忆，途中需跨越秦岭巴山天险：应对栈道损毁、山洪阻滞等自然与人为挑战，传承"守望相助"的人文精神。</p>
+        <p>其中，金牛道侧重搜救三国军事防御图谱等遗存，陈仓道焦抢救栈道营造技艺秘籍，荔枝道重点守护荔枝转运文献与川东民俗技艺图谱，最终整合成果打造《蜀道文脉守护图鉴》。</p></div>
+<div class="f">游戏玩法（以金牛道关卡为例）</div>
+<div class="k"><p>起点：金牛道北端起点汉中褒谷口驿站。玩家在此接受金牛道文脉守护总任务，需沿古道向南，修复3处关键损毁驿道，收集剑门关军事防御图谱、白马关三国商贸契约、七曲山文昌文化典籍三类核心文化遗存，最终完成《金牛道文化分册》的编撰。
+</p>
+    <p></p>
+    <p>主线任务：</p>
+    <p>第一阶段：从褒谷口出发，经宁强县抵达剑门关。需修复山间损毁的悬空栈道，模拟古人"凿孔立柱、铺板搭阁"的营造流程；在关楼完成弩炮防御演练，理解古代关隘"一夫当关，万夫莫开"的军事逻辑；收集《剑州重阳亭铭》残拓片，补充军事文化史料；</p>
+<p>第二阶段：从剑门关前往白马关。协助当地驿丞修复驿站粮仓，解决物资短缺问题；在庞统祠完成三国遗迹拼图，解锁落凤坡历史典故：收集古商贸契约拓本，梳理金牛道古代商贸流通脉络；</p>
+<p>第三阶段：从白马关至梓潼七曲山。参与文昌庙会民俗活动，收集唐明皇"幸蜀"相关唐诗手稿；协助工匠维护古道千年古柏，学习古树保护知识；获取文昌文化典籍，完善文化分册的民俗和文学板块。
+</p>
+    <p></p>
+    <p>路线</p>
+    <p>主线路线：褒谷口驿站→宁强驿→剑门关→白马关→梓潼七曲山→绵阳涪城驿，沿官方驿道推进，节点清晰，任务目标明确，是完成总任务的基础路径。</p>
+<p>支线路线：玩家可在剑门关支线探索翠云廊，与护柏人 NPC 互动，解锁古柏群的保护传说；在白马关支线前往落凤坡遗址，挖掘庞统相关的民间故事；在七曲山支线寻访司马相如读书台，收集文人行旅轶事。支线任务无强制时限，可自由探索，完成后获得专属文化奖励。
+</p>
+    <p></p>
+    <p>终点：金牛道南端终点绵阳涪城驿。玩家在此提交《金牛道文化分册》的全部资料，验收修复驿道的成果，获得金牛道全景3D模型、"蜀道文驿使"进阶头衔、文驿积分翻倍奖励，同时解锁与荔枝道、陈仓道的联动任务线索。</p>
+</div>
+
+<div class="i" ><img src="./pic/蜀42.jpg" height="200px" width="100%"></div>
+<div class="g">蜀道驿影</div>
+</body>
+<script src="./js/轮播2.js"></script>
+</html>
